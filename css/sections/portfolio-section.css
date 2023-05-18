@@ -1,0 +1,94 @@
+
+.portfolio-item {
+    width: 30%;
+
+    position: relative;
+    padding: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio-item.mg {
+    margin: 0 5%;
+}
+
+.portfolio-item .layer-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(32, 32, 32, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+}
+
+.portfolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-item .layer-content .layer-inf {
+    position: absolute;
+    /*Hero image*/
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.layer-content .portfolio-item-category {
+    color: var(--mainColor);
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s, opacity .5s;
+    transition-delay: .2s;
+}
+
+.portfolio-item-title {
+    font-size: 20px;
+    color: var(--whiteColor);
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s, opacity .5s;
+    transition-delay: .3s;
+}
+
+.layer-content a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: var(--whiteColor);
+    background-color: var(--mainColor);
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s, opacity .5s;
+    transition-delay: .3s;
+}
+
+.layer-content a i {
+    /*وسطلي الاي نفس حجم الهاي*/
+    line-height: 40px;
+}
+
+
+.portfolio-item:hover .layer-content .portfolio-item-title,
+.portfolio-item:hover .layer-content a,
+.portfolio-item:hover .layer-content .portfolio-item-category {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}

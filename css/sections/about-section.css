@@ -1,0 +1,52 @@
+.about-item:hover .about-item-title {
+    color: var(--whiteColor);
+}
+
+.about-item:hover .about-item-desc {
+    color: #adadad;
+}
+
+.about-section .about-item {
+
+    width: 30%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+}
+
+.about-item.mg {
+    margin: 0 5%;
+}
+
+.team-iteam.mg {
+    margin: 0 5%;
+}
+
+.blog-item.mg {
+    margin: 0 5%;
+}
+
+.contact-item.mg {
+    margin: 0 5%;
+}
+
+.about-item .icon {
+    color: var(--mainColor);
+    margin-bottom: 10px;
+}
+
+.about-item-title {
+    margin-bottom: 10px;
+    transition: color .5s;
+
+}
+
+.about-item-desc {
+    line-height: 1.2;
+    margin-bottom: 10px;
+    transition: color .5s;
+}
+
+.about-link {
+    color: var(--mainColor);
+}

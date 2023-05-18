@@ -1,0 +1,330 @@
+/* Common */
+/*
+-overlay
+ container
+-Opicity hover
+-Section heder
+-Section padding
+-hover effect 1 (left to right)
+-hover effect 2 (Top to button)
+*/
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*General css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*css 3 متخليش البوردر او البادينق يزودو بالويدث تاع العنصر بياخدو من الويدث الموجود*/
+}
+
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+:root {
+    --mainColor: #6195ff;
+    --grayColor: #999;
+    --whiteColor: #fff;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+}
+
+/* .header-content {
+    overflow: hidden;
+ To solve float problem 
+} */
+
+.clear {
+    clear: both;
+}
+
+.ltr-effect,
+.tb-effect {
+    position: relative;
+}
+
+.ltr-effect::after,
+.tb-effect::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(32, 32, 32);
+    z-index: -1;
+}
+
+
+.ltr-effect::after {
+    width: 0;
+    transition: width 0.5s;
+}
+
+.tb-effect::after {
+    height: 0;
+    transition: height 0.5s;
+
+}
+
+.ltr-effect:hover:after {
+    width: 100%;
+}
+
+.tb-effect:hover:after {
+    height: 100%;
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: montserrat, sans-serif;
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section-header {
+    text-align: center;
+
+}
+
+.section-header .title-section {
+    text-align: center;
+    font-size: 35px;
+}
+
+.section-header .line {
+    display: block;
+    height: 5px;
+    width: 60px;
+    background-color: var(--mainColor);
+    margin: 0 auto 70px auto;
+}
+
+
+/**/
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    background: rgb(0, 0, 0 , 0.4);
+}
+
+.header .logo {
+    width: 40%;
+}
+
+.header img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+
+
+.header .nav {
+    width: 60%;
+    list-style: none;
+    /* حذف نظام القائمة */
+    text-align: right;
+}
+
+.header .nav>li {
+    display: inline-block;
+    text-align: left;
+}
+
+.header .nav>li>a {
+    color: var(--whiteColor);
+    text-decoration: none;
+    /* ازالة الخطوط */
+    font-size: 15px;
+    /*Remove Line*/
+    display: block;
+    padding: 30px 15px;
+}
+
+.header .nav>li a.active::after,
+.header .nav>li a::after {
+    content: "";
+    display: block;
+    margin-top: 2px;
+    height: 3px;
+    background-color: var(--mainColor);
+    ;
+    transition: width .5s;
+
+}
+
+.header .nav>li>a.active::after {
+    width: 100%;
+}
+
+.header .nav>li>a:after {
+    width: 0;
+}
+
+.header .nav>li>a:hover::after {
+    width: 100%;
+}
+
+.dropdwon {
+    position: relative;
+}
+
+.dropdwon-menu {
+    position: absolute;
+    background-color: var(--mainColor);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+
+}
+
+.dropdwon-menu a {
+    color: var(--whiteColor);
+    display: block;
+    padding: 10px;
+
+}
+
+.dropdwon:hover .dropdwon-menu {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+/* Home Section */
+/* background-position: center; center الصورة بتتوسط وبتتسنت  */
+
+.home {
+    height: 100vh;
+    /* يمله الحيز من الفيو بورت تاعت الهاي الموجودة عندي يحجمو عقد الشاشة*/
+    background-image: url('../images/background/background1.webp');
+    background-size: cover;
+    position: relative;
+}
+
+.home-content {
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*نص للشمال ونص لفوق*/
+    text-align: center;
+}
+
+.home-title {
+    color: var(--whiteColor);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.home-description {
+    margin: 20px 0;
+    color: var(--whiteColor);
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.home-bttn-start {
+    margin-right: 10px;
+    background-color: var(--whiteColor);
+}
+
+.home-bttn-learn {
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+}
+
+/*transition-> بشتغل على كل العناصر الي عندي فانا حددت قولتلوا اشتغل على عنصر الاوبسيتي بس*/
+.opacity-hover {
+    transition: opacity .5s;
+}
+
+.opacity-hover:hover {
+    opacity: 0.8;
+}
+
+
+/*Footer Sections*/
+.footer {
+    background: #1c1d21;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 20px 0;
+    padding: 60px 0;
+
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--mainColor);
+    color: var(--whiteColor);
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.footer-links li a i {
+    line-height: 50px;
+}
+
+.footer .copyright {
+    color: var(--grayColor);
+    font-size: 15px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,76 @@
+
+.pricing-item {
+    width: 30%;
+    padding: 20px 15px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+.pricing-item.mg {
+    margin: 0 5%;
+}
+
+.pricing-item-text {
+    text-transform: uppercase;
+    font-size: 17px;
+    color: var(--grayColor);
+    transition: color 0.5s;
+}
+
+.pricing-item:hover .pricing-item-text {
+    color: #7ba7ff;
+}
+
+/* لو عايز توسطن عنصر واخد ويدث بالمارجين
+لو عايز توسطن كلام تيكستت اللاين
+*/
+
+.pricing-item-permonth {
+    width: 130px;
+    height: 130px;
+    padding: 20px 0;
+    margin: 40px auto;
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+}
+
+.pricing-item-permonth .dollar {
+    font-size: 50px;
+}
+
+.pricing-item:hover .dollar {
+    color: var(--whiteColor);
+}
+
+.pricing-item-permonth .month {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pricing-item:hover .month {
+    color: var(--whiteColor);
+}
+
+.pricing-list {
+    list-style: none;
+}
+
+.pricing-list li {
+    color: var(--grayColor);
+    line-height: 1.8;
+
+}
+
+.pricing-item-purchase {
+    background: none;
+    border: 0;
+    display: block;
+    width: 140px;
+    border: 2px solid #7ba7ff;
+    padding: 10px;
+    margin: 15px auto 0 auto;
+    color: #7ba7ff;
+    transition: color 0.5s;
+
+}
